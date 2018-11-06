@@ -4,7 +4,7 @@
 			<label for="new">Add to-do
 				<input id="new" type="text" v-model="newToDo" required>
 			</label>
-			<input type="submit" value="Add to List" @click.prevent="addToDo">
+			<input class="action" type="submit" value="Add to List" @click.prevent="addToDo">
 		</form>
 	</div>
 </template>
@@ -19,11 +19,6 @@
 		},
 		props: ['todos'],
 		methods: {
-			// showToDo(){
-			// 	console.log(this.newToDo);
-			// 	this.$emit('showNew', this.newToDo);
-			// },
-			// submit button inactive until text is in new field
 			addToDo(){
 				if (this.newToDo) {
 					this.$emit('addNew', this.newToDo);
